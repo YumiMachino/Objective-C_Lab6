@@ -1,5 +1,5 @@
 //
-//  Dice.h
+//  InputHandler.h
 //  Threelow
 //
 //  Created by Yumi Machino on 2021/02/28.
@@ -9,10 +9,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Dice : NSObject
+@interface InputHandler : NSObject
 
-@property (nonatomic) NSInteger currentValue;
-- (NSInteger) RandomizeValue ;
++ (NSString *) get_user_input;
+
 @end
 
 NS_ASSUME_NONNULL_END

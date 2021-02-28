@@ -18,8 +18,10 @@
     return self;
 }
 
-- (void) RandomizeValue {
-    // randomize the current value here
+// randomize the current value here
+- (NSInteger) RandomizeValue {
+    NSInteger newValue = arc4random_uniform(7);
+    return newValue;
 }
  
 
