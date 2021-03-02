@@ -24,8 +24,7 @@ int main(int argc, const char * argv[]) {
             [[gameController dices]addObject: dice];
         }
         [gameController printDices];
-        [gameController rollDices];
-        [gameController printDices];
+
 
         while (TRUE) {
             
@@ -33,23 +32,19 @@ int main(int argc, const char * argv[]) {
             NSString *user_input = [InputHandler get_user_input];
             if ([user_input isEqualToString: @"roll"]) {
                 /// roll all the dices
-//                [gameController rollDices];
-//                diceEmojis = @"";
-//                for (int i = 0; i < 6; i++){
-//                    Dice *dice = [[gameController dices] objectAtIndex:i];
-//                    diceEmojis = [diceEmojis stringByAppendingString:[dice currentValue]];
-//                    diceEmojis = [diceEmojis stringByAppendingString:@" "];
-//                }
-//                NSLog(@"diceEmojis: %@", diceEmojis);
-                
-                NSLog(@"Enter index of the dice you wish to hold");
+                [gameController rollDices];
+                NSLog(@"\nEnter index of the dice you wish to hold");
                 NSString *index_user_input = [InputHandler get_user_input];
-                if ([index_user_input isEqualToString:@"0"]) {
-                    /// add object to holdDices array
-                    [gameController holdDie:[index_user_input intValue]];
-                    // change visual
-                   
+                if ([index_user_input isEqualToString:@"0"] || [index_user_input isEqualToString:@"1"] || [index_user_input isEqualToString:@"2"] || [index_user_input isEqualToString:@"3"] || [index_user_input isEqualToString:@"4"] ||[index_user_input isEqualToString:@"5"] || [index_user_input isEqualToString:@"6"]) {
+                    /// add object to holdDices array, change visual representation
+                    [gameController holdDice:[index_user_input intValue]];
                 }
+                
+                
+                
+                
+            } else if ([user_input isEqualToString:@"reset"]) {
+                [gameController resetDice];
             }
         }
     }

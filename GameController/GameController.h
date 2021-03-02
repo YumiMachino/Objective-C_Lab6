@@ -17,9 +17,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) NSMutableArray *heldDices;
 
 - (instancetype)init;
-- (void) holdDie: (NSInteger) diceIndex;
+- (void) holdDice: (NSInteger) diceIndex;
 - (void) printDices;
 - (void) rollDices;
+- (void) resetDice;
 
 @end
 
