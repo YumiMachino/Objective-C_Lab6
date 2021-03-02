@@ -13,7 +13,7 @@
 + (NSString *) get_user_input{
     char str[256];
 
-    NSString *prompt = @"\nInput:";
+    NSString *prompt = @"";
     prompt = [prompt stringByReplacingOccurrencesOfString:@"\n" withString:@" "];
     NSLog(@"%@", prompt);
     fgets(str, 256,stdin);

@@ -21,6 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void) printDices;
 - (void) rollDices;
 - (void) resetDice;
+- (void) printScore;
 
 @end
 

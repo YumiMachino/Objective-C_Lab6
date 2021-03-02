@@ -34,11 +34,10 @@
         }
     } else {
         [_heldDices addObject: [_dices objectAtIndex: diceIndex]];
-        [self printDices];
+        [self printScore];
     }
 }
  
-
 /// print all the dices
 - (void) printDices{
       NSString *diceEmojis = @"";
@@ -71,6 +70,47 @@
     [self printDices];
 }
 
+/// calculate and resurn s the current score added up by held dice values
+- (void) printScore {
+    NSLog(@"----------------------");
+    NSLog(@"--   Current Dice   --");
+
+    NSString *diceEmojis = @"";
+    /// store 5 dice objects
+    for (int i = 0; i < 6; i++){
+        Dice *dice = [_dices objectAtIndex:i];
+        if ([_heldDices containsObject:dice]) {
+            diceEmojis = [diceEmojis stringByAppendingString:@" ["];
+            diceEmojis = [diceEmojis stringByAppendingString:[dice currentValue]];
+            diceEmojis = [diceEmojis stringByAppendingString:@"] "];
+        } else {
+            diceEmojis = [diceEmojis stringByAppendingString:[dice currentValue]];
+            diceEmojis = [diceEmojis stringByAppendingString:@" "];
+        }
+    }
+    NSLog(@"%@", diceEmojis);
+    NSInteger score = 0;
+    for (int i = 0; i < [_heldDices count] ; i++){
+        Dice *dice = [_heldDices objectAtIndex:i];
+        if ([[dice currentValue] isEqualToString:@"⚀"]) {
+            score = score + 1;
+        } else if ([[dice currentValue] isEqualToString:@"⚁"]) {
+            score = score + 2;
+        } else if ([[dice currentValue] isEqualToString:@"⚂"]) {
+            score = score + 3;
+        } else if ([[dice currentValue] isEqualToString:@"⚃"]) {
+            score = score + 4;
+        } else if ([[dice currentValue] isEqualToString:@"⚄"]) {
+            score = score + 5;
+        } else if ([[dice currentValue] isEqualToString:@"⚅"]) {
+            score = score + 6;
+        }
+    }
+    
+    NSLog(@"--    Total Score   --");
+    NSLog(@"Score: %ld", (long)score);
+    NSLog(@"----------------------");
+}
 
 
 @end
