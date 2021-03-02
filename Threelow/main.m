@@ -18,13 +18,13 @@ int main(int argc, const char * argv[]) {
         BOOL gameOn = TRUE;
         GameController *gameController = [GameController new];
         
-      
+        
         /// store 5 dice objects
         for (int i = 1; i < 7; i++){
             Dice *dice = [[Dice alloc] initWithValue: i];
             [[gameController dices]addObject: dice];
         }
-
+        
         while (gameOn) {
             
             NSLog(@"%@", instruction);
@@ -51,7 +51,7 @@ int main(int argc, const char * argv[]) {
                     NSLog(@" GAME OVER");
                 }
                 [gameController printScore];
-            
+                
             }else if ([user_input isEqualToString: @"hold"]) {
                 NSLog(@"Enter the number of the dice: ");
                 NSString *index_user_input = [InputHandler get_user_input];

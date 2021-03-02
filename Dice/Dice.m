@@ -59,7 +59,7 @@
         [self setCurrentValue:emoji];
     }
 }
- 
+
 
 
 

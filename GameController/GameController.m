@@ -28,7 +28,6 @@
         NSString *answer = [InputHandler get_user_input];
         if ([answer isEqualToString:@"Y"]) {
             [_heldDices removeObject: [_dices objectAtIndex:diceIndex]];
-//            [self printDices];
         } else if ([answer isEqualToString:@"N"]) {
             NSLog(@"Select hold, and enter index again");
         }
@@ -37,24 +36,6 @@
         [self printScore];
     }
 }
- 
-/// print all the dices
-//- (void) printDices{
-//      NSString *diceEmojis = @"";
-//      /// store 5 dice objects
-//      for (int i = 0; i < 6; i++){
-//          Dice *dice = [_dices objectAtIndex:i];
-//          if ([_heldDices containsObject:dice]) {
-//              diceEmojis = [diceEmojis stringByAppendingString:@" ["];
-//              diceEmojis = [diceEmojis stringByAppendingString:[dice currentValue]];
-//              diceEmojis = [diceEmojis stringByAppendingString:@"] "];
-//          } else {
-//              diceEmojis = [diceEmojis stringByAppendingString:[dice currentValue]];
-//              diceEmojis = [diceEmojis stringByAppendingString:@" "];
-//          }
-//      }
-//      NSLog(@"diceEmojis: %@", diceEmojis);
-//}
 
 /// roll all the dices
 - (void) rollDices {
@@ -78,7 +59,7 @@
 - (void) printScore {
     NSLog(@"----------------------");
     NSLog(@"--   Current Dice   --");
-
+    
     NSString *diceEmojis = @"";
     /// store 5 dice objects
     for (int i = 0; i < 6; i++){
