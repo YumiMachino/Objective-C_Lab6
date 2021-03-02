@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AED7707125EC4C30008E2D33 /* InputHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = AED7707025EC4C2F008E2D33 /* InputHandler.m */; };
+		AED7707725EC4F56008E2D33 /* GameController.m in Sources */ = {isa = PBXBuildFile; fileRef = AED7707625EC4F56008E2D33 /* GameController.m */; };
 		AEE2FB9525EC490A00992C8D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AEE2FB9425EC490A00992C8D /* main.m */; };
 		AEE2FB9E25EC49CA00992C8D /* Dice.m in Sources */ = {isa = PBXBuildFile; fileRef = AEE2FB9D25EC49CA00992C8D /* Dice.m */; };
 /* End PBXBuildFile section */
@@ -27,6 +28,8 @@
 /* Begin PBXFileReference section */
 		AED7706F25EC4C2F008E2D33 /* InputHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InputHandler.h; sourceTree = "<group>"; };
 		AED7707025EC4C2F008E2D33 /* InputHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InputHandler.m; sourceTree = "<group>"; };
+		AED7707525EC4F56008E2D33 /* GameController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameController.h; sourceTree = "<group>"; };
+		AED7707625EC4F56008E2D33 /* GameController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameController.m; sourceTree = "<group>"; };
 		AEE2FB9125EC490A00992C8D /* Threelow */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Threelow; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEE2FB9425EC490A00992C8D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AEE2FB9C25EC49CA00992C8D /* Dice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Dice.h; sourceTree = "<group>"; };
@@ -53,9 +56,19 @@
 			path = InputHandler;
 			sourceTree = "<group>";
 		};
+		AED7707925EC4F5C008E2D33 /* GameController */ = {
+			isa = PBXGroup;
+			children = (
+				AED7707525EC4F56008E2D33 /* GameController.h */,
+				AED7707625EC4F56008E2D33 /* GameController.m */,
+			);
+			path = GameController;
+			sourceTree = "<group>";
+		};
 		AEE2FB8825EC490A00992C8D = {
 			isa = PBXGroup;
 			children = (
+				AED7707925EC4F5C008E2D33 /* GameController */,
 				AED7707325EC4C36008E2D33 /* InputHandler */,
 				AEE2FBA025EC49D100992C8D /* Dice */,
 				AEE2FB9325EC490A00992C8D /* Threelow */,
@@ -145,6 +158,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AEE2FB9E25EC49CA00992C8D /* Dice.m in Sources */,
+				AED7707725EC4F56008E2D33 /* GameController.m in Sources */,
 				AED7707125EC4C30008E2D33 /* InputHandler.m in Sources */,
 				AEE2FB9525EC490A00992C8D /* main.m in Sources */,
 			);

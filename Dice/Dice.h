@@ -11,8 +11,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Dice : NSObject
 
-@property (nonatomic) NSInteger currentValue;
-- (NSInteger) RandomizeValue ;
+@property (nonatomic) NSString* currentValue;
+- (instancetype)initWithValue: (NSInteger) value;
+- (void) RandomizeValue ;
 @end
 
 NS_ASSUME_NONNULL_END

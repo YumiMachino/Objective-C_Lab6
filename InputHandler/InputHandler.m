@@ -13,15 +13,15 @@
 + (NSString *) get_user_input{
     char str[256];
 
-    NSString *prompt = @"Input:";
+    NSString *prompt = @"\nInput:";
     prompt = [prompt stringByReplacingOccurrencesOfString:@"\n" withString:@" "];
     NSLog(@"%@", prompt);
     fgets(str, 256,stdin);
     NSString *result = [NSString stringWithCString:str
                                          encoding:NSUTF8StringEncoding];
-    
+
     NSString *trimmed_result = [result stringByTrimmingCharactersInSet: [NSCharacterSet whitespaceAndNewlineCharacterSet]];
-    
+
     return trimmed_result;
 }
 
